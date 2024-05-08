@@ -1,0 +1,14 @@
+{
+  "jest.shell": "/bin/zsh",
+  "jest.jestCommandLine": "source ~/.zshrc && npx jest --collectCoverageFrom",
+  "markdown.styles": ["./.vscode/github-markdown.css", "./.vscode/github-markdown-dark.css"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.printWidth": 120,
+  "prettier.useEditorConfig": false,
+  "prettier.requireConfig": true
+}

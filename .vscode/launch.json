@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Localdev Attach",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "restart": true,
+      "sourceMaps": true,
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/app"
+    },
+    {
+      "type": "node",
+      "runtimeVersion": "18",
+      "name": "vscode-jest-tests.v2.et-software-engineer-interview",
+      "request": "launch",
+      "args": [
+        "run",
+        "test:jest",
+        "--",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "runtimeExecutable": "npm"
+    }
+  ]
+}
