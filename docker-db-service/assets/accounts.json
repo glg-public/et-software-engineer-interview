@@ -1,0 +1,62 @@
+[
+  {
+    "accountId": "fe06bb4b-a4d0-436c-ae18-86638adf6560",
+    "name": "Beahan, Reilly and Altenwerth",
+    "taxRate": 0.06,
+    "currency": "IRR"
+  },
+  {
+    "accountId": "845ba0c1-51df-4f8c-b861-7ed6ae30fdf0",
+    "name": "Dach - Tromp",
+    "taxRate": 0.13,
+    "currency": "WST"
+  },
+  {
+    "accountId": "318d776b-f085-4989-9748-106ec978ad86",
+    "name": "McLaughlin, Jones and Dickinson",
+    "taxRate": 0.08,
+    "currency": "KGS"
+  },
+  {
+    "accountId": "c11758fb-9cad-4a36-84f6-ad7bbd682f5e",
+    "name": "Waelchi - Shields",
+    "taxRate": 0.26,
+    "currency": "SRD"
+  },
+  {
+    "accountId": "9d803353-aa70-414c-92d3-da073e8ecce1",
+    "name": "Bashirian - Murphy",
+    "taxRate": 0.3,
+    "currency": "PHP"
+  },
+  {
+    "accountId": "c93b9eba-1993-4bae-99e1-551fb1537b34",
+    "name": "Kihn and Sons",
+    "taxRate": 0.04,
+    "currency": "LKR"
+  },
+  {
+    "accountId": "99728148-34d3-47f1-9bc3-390052473c45",
+    "name": "Sporer, Gutkowski and Johns",
+    "taxRate": 0.23,
+    "currency": "TND"
+  },
+  {
+    "accountId": "075eb49d-ad11-4faa-b8d9-699b2009a29e",
+    "name": "Pollich - Erdman",
+    "taxRate": 0.06,
+    "currency": "ANG"
+  },
+  {
+    "accountId": "df9423da-a0d2-465b-894b-cbf01ee59553",
+    "name": "Schamberger Inc",
+    "taxRate": 0.27,
+    "currency": "MUR"
+  },
+  {
+    "accountId": "9de8d206-848d-4860-9942-b3f60ce56021",
+    "name": "Morar - McDermott",
+    "taxRate": 0.12,
+    "currency": "TZS"
+  }
+]

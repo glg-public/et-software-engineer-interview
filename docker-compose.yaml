@@ -1,0 +1,50 @@
+networks:
+  local:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.enable_icc: 'true'
+      com.docker.network.bridge.enable_ip_masquerade: 'true'
+      com.docker.network.bridge.host_binding_ipv4: 0.0.0.0
+      com.docker.network.driver.mtu: 1200
+    ipam:
+      config:
+        - subnet: 172.55.0.0/16
+    name: local
+services:
+  db-service:
+    container_name: db-service
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P4ssw0rd
+      - MSSQL_PID=Developer
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    init: true
+    networks:
+      - local
+    ports:
+      - 1433:1433
+    restart: unless-stopped
+    volumes:
+      - ./docker-db-service:/usr/config/
+    entrypoint: ['bash', '/usr/config/entrypoint.sh']
+  rest-api-service:
+    container_name: rest-api-service
+    depends_on: ['db-service']
+    environment:
+      - PORT=3000
+      - DB_SERVER=db-service
+      - DB_USER=sa
+      - DB_PASSWORD=P4ssw0rd
+      - DB_DATABASE=devdb
+    image: et-software-engineer-interview:test
+    init: true
+    networks:
+      - local
+    ports:
+      - 9229:9229
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+      - /app/dist
+      - /app/node_modules
