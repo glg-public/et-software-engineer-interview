@@ -1,0 +1,25 @@
+{
+  "collectCoverageFrom": ["src/**/*.ts", "src/**/*.js"],
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": ["decs.d.ts", "dist/*"],
+  "extensionsToTreatAsEsm": [".ts", ".tsx", ".jsx"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  },
+  "modulePathIgnorePatterns": ["/dist/"],
+  "testEnvironment": "node",
+  "testRegex": "(/src/.*\\.(test|spec))\\.(ts|js)x?$",
+  "transform": {
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        "useESM": true,
+        "isolatedModules": true
+      }
+    ]
+  },
+  "transformIgnorePatterns": ["node_modules"],
+  "preset": "ts-jest/presets/default-esm"
+}
